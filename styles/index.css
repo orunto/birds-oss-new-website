@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
+
+@theme {
+    --breakpoint-*: initial;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 75rem;
+}
 body {
     margin: 0;
     font-family: "Space Grotesk", sans-serif;
@@ -7,23 +15,21 @@ body {
     flex-direction: column;
     background-color: black;
     color: white;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Nav */
 nav {
-    display: flex;
-    width: 100%;
-    position: fixed;
-    box-sizing: border-box;
-    border-bottom: 2px solid wheat;
-    background-color: black;
-    /* background-image: url('../assets/images/landing-bg.jpg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 3;
+    background-image: url('../assets/images/bg.jpg');
+    background-size: cover;  
+    background-repeat: none
+}
+nav * {
+    border-color: #005596;
 }
 
-nav ul {
+/* nav ul {
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
@@ -35,16 +41,6 @@ nav ul {
     box-sizing: border-box;
 }
 
-nav ul li {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    border-right: 2px solid wheat;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s;
-    cursor: pointer;
-}
 
 nav ul li:has(button) {
     border-right: none;
@@ -52,7 +48,7 @@ nav ul li:has(button) {
 
 nav ul li:hover {
     background-color: white;
-    color: wheat;
+    color: #229EFF;
     font-weight: 500;
 }
 
@@ -68,7 +64,7 @@ nav button {
     display: flex;
     align-items: center;
     gap: 16px;
-}
+} */
 
 a {
     color: inherit;
@@ -93,16 +89,22 @@ a {
 
 /* HERO */
 main {
-    margin-top: 96px;
+    margin-top: 92px;
     position: relative;
     z-index: 2;
     background: transparent;
+
+    @media (max-width: 900px) {
+        margin-top: 88px;
+    }
 }
+
+
 .bg {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 1;
     background-image: url('../assets/images/bg.jpg');
@@ -110,20 +112,16 @@ main {
     background-repeat: no-repeat;
 }
 
-h1 {
-    font-size: 64px;
-    margin: 0;
-}
 
 #start {
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    border-bottom: 2px solid wheat;
+    border-bottom: 2px solid #229EFF;
 }
 
 #start article {
-    border-right: 2px solid wheat;
+    border-right: 2px solid #229EFF;
     width: calc(50% );
     box-sizing: border-box;
     padding: 64px 48px;
@@ -142,7 +140,7 @@ h1 {
 
 /* MISSION */
 .mission {
-    border-bottom: 2px solid wheat;
+    border-bottom: 2px solid #229EFF;
     display: flex;
     box-sizing: border-box;
     width: 100%;
@@ -154,17 +152,13 @@ h1 {
         padding-right: 3px;
     }
 }
-h2 {
-    font-size: 40px;
-    margin: 0;
-}
 
 /* .mission figure {
     width:  50%;
 } */
 
 .mission article {
-    border-left: 2px solid wheat;
+    border-left: 2px solid #229EFF;
     width: 50%;
     max-width: 50% ;
     box-sizing: border-box;
@@ -177,7 +171,7 @@ h2 {
 
 /* Webinars */
 .webinars {
-    border-bottom: 2px solid wheat;
+    border-bottom: 2px solid #229EFF;
     display: flex;
     padding: 64px 48px;
     width: 100%;
@@ -196,7 +190,7 @@ h3 {
     border: 2px solid black;
     box-shadow: 5px 5px 1px black;
     color: inherit;
-    background-color: wheat;
+    background-color: #229EFF;
     font-family: inherit;
     color: inherit;
     outline: none;
@@ -215,22 +209,23 @@ h3 {
 
 
 /* footer */
-footer {
+/* footer {
     width: 100%;
     padding: 48px;
     display: flex;
     position: relative;
-    z-index: 2;
+    z-index: 2; */
     /* flex-direction: column; */
-    gap: 16px;
+    /* gap: 16px;
     justify-content: space-between;
     box-sizing: border-box;
     background-color: rgb(0, 0, 0, 0.2);
     color: white;
-}
+} */
 
-footer p {
+/* footer p {
     margin: 0;
-}
+} *
+/
 
 
